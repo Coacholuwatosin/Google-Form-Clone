@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        #container {
+            width: 90%;
+            max-width: 900px;
+            margin: 2rem auto;
+            background: #ffffff;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2d3748;
+            font-size: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4f46e5;
+            color: white;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f8fafc;
+            word-wrap: break-word;
+            vertical-align: top;
+        }
+
+        #feedback {
+            max-height: 150px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        #backBtn {
+            display: block;
+            width: 100%;
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        #backBtn:hover {
+            background-color: #4338ca;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Form Results</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><%= formData.name %></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><%= formData.email %></td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td><%= formData.phone %></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><%= formData.address %></td>
+            </tr>
+            <tr>
+                <th>Date of Birth</th>
+                <td><%= formData.dob %></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td><%= formData.gender %></td>
+            </tr>
+            <tr>
+                <th>Feedback</th>
+                <td id="feedback"><%= formData.feedback %></td>
+            </tr>
+        </table>
+        <a href="/" id="backBtn">Go Back</a>
+    </div>
+</body>
+</html>
